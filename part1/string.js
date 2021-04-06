@@ -16,3 +16,11 @@ console.log( // 進数から文字列への変換
     String.fromCharCode(`0x${str.charCodeAt(1).toString(16)}`),
     String.fromCharCode(`0x${str.charCodeAt(2).toString(16)}`),
 );
+
+/* 文字列の大小比較 */
+console.log("A" < "B"); // code unit 的には `65 < 66` という比較になっているので true
+console.log("ABC" < "ACD"); // 先頭から順番に比較し、最終的に `C < D` なので、true
+
+/* 文字列の部分取得 */
+const url = "https://example.com?param=1";
+console.log(url.slice(url.indexOf("?"))); // url.slice(19) => "?param=1"
