@@ -24,3 +24,13 @@ console.log("ABC" < "ACD"); // 先頭から順番に比較し、最終的に `C 
 /* 文字列の部分取得 */
 const url = "https://example.com?param=1";
 console.log(url.slice(url.indexOf("?"))); // url.slice(19) => "?param=1"
+
+/* 正規表現 */
+const regexp = () => {
+    const re1 = new RegExp("["); // 不正な正規表現だが、呼び出されない限りは問題なし
+    // const re2 = /[/; // ソースコードがロードされた段階で評価されるので、呼び出されなくとも例外を吐く
+}
+
+const count = 3; // コンストラクタを使うと、動的にも書ける例
+const pattern1 = new RegExp(`a{${count}}`);
+const pattern2 = new RegExp(`\\s{${count}}`);
