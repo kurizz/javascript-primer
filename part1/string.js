@@ -45,3 +45,8 @@ console.log(result1);
 const alphabetsPattern2 = /[a-zA-Z]+/g; // g フラグをつけると、繰り返し match をかける
 const result2 = str1.match(alphabetsPattern2);
 console.log(result2);
+
+/* 正規表現: 部分取得 capture */
+const pattern = /ECMAScript (\d+)/g;
+const [c1, c2] = "ECMAScript 6 ECMAScript 5".match(pattern);
+console.log(c1, c2); // => ECMAScript 6 ECMAScript 5
